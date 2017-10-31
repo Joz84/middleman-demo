@@ -1,0 +1,23 @@
+<% flat = data.flats[owner] %>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.4) 50%), url('https://kitt.lewagon.com/placeholder/cities/<%= flat.city_slug %>');">
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="description text-center">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}" %>
+        <div class="desc-stars">
+          <% flat.rating.times do %>
+            <i class="fa fa-star star-active"></i>
+          <% end %>
+          <% (5 - flat.rating).times do %>
+            <i class="fa fa-star"></i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
